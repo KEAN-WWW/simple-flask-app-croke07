@@ -1,7 +1,8 @@
 from flask import Flask
 
-# Flask application object that tests will import
+# package-level Flask app object used by routes and tests
 app = Flask(__name__)
 
-# Import routes so the @app.route handlers get registered
+# import routes so @app.route handlers register
 from . import app as _routes  # noqa: F401
+
